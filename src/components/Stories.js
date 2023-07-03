@@ -24,7 +24,7 @@ export default function Stories(){
 
 }
 
-function Storiesrender(){
+function Storiesrender(props){
 return(
 <div className="story">
           <div className="imagem">
