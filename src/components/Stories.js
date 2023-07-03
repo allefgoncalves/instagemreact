@@ -15,9 +15,7 @@ export default function Stories(){
 
     return (
       <lu className="stories">
-        {stories.map(stories1=><Storiesrender imagem1={stories.imagem} user1= {stories1.user}/>)}
-        
-
+        {stories.map(stories=><Storiesrender imagem1={stories.imagem} user1= {stories.user}/>)}
         <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
@@ -30,10 +28,10 @@ function Storiesrender(){
 return(
 <div className="story">
           <div className="imagem">
-            <img src={imagem1} alt={user1}/>
+            <img src={props.imagem1} alt={props.user1}/>
           </div>
           <div className="usuario">
-            {user1}
+            {props.user1}
           </div>
         </div>
 );
