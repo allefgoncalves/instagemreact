@@ -1,82 +1,40 @@
+import { useState } from "react";
+
 export default function Stories(){
+  const stories=[
+    {imagem:"assets/img/9gag.svg",user:"9gag"},
+    {imagem:"assets/img/meowed.svg",user:"meowed"},
+    {imagem:"assets/img/barked.svg",user:"barked"},
+    {imagem:"assets/img/nathanwpylestrangeplanet.svg",user:"nathanwpylestrangeplanet"},
+    {imagem:"assets/img/wawawicomics.svg",user:"wawawicomics"},
+    {imagem:"assets/img/respondeai.svg",user:"respondeai"},
+    {imagem:"assets/img/filomoderna.svg",user:"filomoderna"},
+    {imagem:"assets/img/memeriagourmet.svg",user:"memeriagourmet"},
+  ]
+
+
     return (
-        <div className="stories">
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/9gag.svg" alt="9gag"/>
-          </div>
-          <div className="usuario">
-            9gag
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/meowed.svg" alt="meowed"/>
-          </div>
-          <div className="usuario">
-            meowed
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/barked.svg" alt="barked"/>
-          </div>
-          <div className="usuario">
-            barked
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-          </div>
-          <div className="usuario">
-            nathanwpylestrangeplanet
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-          </div>
-          <div className="usuario">
-            wawawicomics
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/respondeai.svg" alt="respondeai"/>
-          </div>
-          <div className="usuario">
-            respondeai
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-          </div>
-          <div className="usuario">
-            filomoderna
-          </div>
-        </div>
-
-        <div className="story">
-          <div className="imagem">
-            <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-          </div>
-          <div className="usuario">
-            memeriagourmet
-          </div>
-        </div>
+      <lu className="stories">
+        {stories.map(stories1=><Storiesrender imagem1={stories.imagem} user1= {stories1.user}/>)}
+        
 
         <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
-      </div>
-
+      </lu>
     );
+
 }
+
+function Storiesrender(){
+return(
+<div className="story">
+          <div className="imagem">
+            <img src={imagem1} alt={user1}/>
+          </div>
+          <div className="usuario">
+            {user1}
+          </div>
+        </div>
+);
+} 
