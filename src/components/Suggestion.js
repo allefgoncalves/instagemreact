@@ -9,7 +9,7 @@ export default function Suggestion(){
     ]
   
     return (
-    <lu class="sugestao">
+    <lu className="sugestao">
          {sugestao.map(sugestao => <Sugestao imagem1={sugestao.imagem} nome1={sugestao.nome} razao1={sugestao.razao} /> )}
     </lu>
     );
@@ -19,15 +19,15 @@ export default function Suggestion(){
 function Sugestao(props) {
     return (
     <li>  
-     <div class="usuario">
+     <div className="usuario">
         <img src={props.imagem1} alt="bad.vibes.memes.svg"/>
-        <div class="texto">
-          <div class="nome">{props.nome1}</div>
-          <div class="razao">{props.razao1}</div>
+        <div className="texto">
+          <div className="nome">{props.nome1}</div>
+          <div className="razao">{props.razao1}</div>
         </div>
       </div>
 
-      <div class="seguir">Seguir</div>
+      <div className="seguir">Seguir</div>
       </li>
     )
 }

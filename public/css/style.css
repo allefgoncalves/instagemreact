@@ -247,12 +247,10 @@ body {
 }
 
 .sidebar .sugestoes .sugestao {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   cursor: pointer;
-  height: 31px;
+  height:auto;
   margin-bottom: 16px;
+  flex-direction: column;
 }
 
 .sidebar .sugestoes .sugestao .usuario {
@@ -296,7 +294,7 @@ body {
 }
 
 ion-icon {
-  visibility: visible;
+  visibility:visible;
 }
 
 .usuario ion-icon {
